@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include <iostream>
 #include <string>
-
+#include <algorithm>
 
 
 int main()
@@ -21,6 +21,7 @@ int main()
 		std::getline(std::cin, *(ptr+i));
 	}
 	//sort names
+	/*
 	for (int end = numberOfName-1; end >=1; --end)
 	{
 		for (int current = 0; current < end; ++current)
@@ -29,6 +30,10 @@ int main()
 				std::swap(*(ptr + current), *(ptr + current + 1));
 		}
 	}
+	*/
+
+	std::sort(ptr, ptr + numberOfName);
+
 	//output
 	std::cout << "Here is your sorted list:\n";
 	for (int i = 0; i < numberOfName; ++i)
